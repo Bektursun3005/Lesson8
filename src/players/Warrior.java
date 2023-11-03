@@ -14,6 +14,7 @@ public class Warrior extends Hero{
         Random random = new Random();
         int n = random.nextInt(2, 4);
         heroes[0].setDamage(heroes[0].getDamage() * n);
+        System.out.println("Warrior use ability");
     }
 }
 

@@ -17,7 +17,11 @@ public class RPG_game {
         Berserk berserk = new Berserk(260, 10,"Alkash");
         Medic assistant = new Medic(300, 5, 5,"Medsestra");
         Golem golem = new Golem (200, 8," Vulkan" );
-        Hero[] heroes = {warrior, doc, magic, berserk, assistant, golem};
+        Thor thor = new Thor(250,10, "Molot");
+        Tank tank = new Tank(350, 5,"T40");
+        Witcher witcher = new Witcher(280, 0, "Akmat");
+        Hero[] heroes = {warrior, doc, magic, berserk, assistant, golem, thor,tank, witcher};
+
 //        showStatistics(boss, heroes);
         play(boss, heroes);
 //        isGameOver(boss, heroes);
