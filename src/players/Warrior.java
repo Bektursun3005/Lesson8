@@ -13,6 +13,7 @@ public class Warrior extends Hero{
     public void applySuperAbility(Boss boss, Hero[] heroes) {
         Random random = new Random();
         int n = random.nextInt(2, 4);
+        heroes[0].setDamage(10);
         heroes[0].setDamage(heroes[0].getDamage() * n);
         System.out.println("Warrior use ability");
     }

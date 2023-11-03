@@ -12,7 +12,7 @@ public class Witcher extends Hero {
             if(heroes[i].getHealth() <= 0) {
                 heroes[i].setHealth(heroes[8].getHealth());
                 heroes[8].setHealth(0);
-                break;
+                System.out.println("Witcher use ability");
             }
         }
     }

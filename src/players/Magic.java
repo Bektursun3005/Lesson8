@@ -11,10 +11,11 @@ public class Magic extends Hero{
 
     @Override
     public void applySuperAbility(Boss boss, Hero[] heroes) {
-        RPG_game.random.nextInt();
-
+        int n = RPG_game.random.nextInt(0,10);
         for (int i = 0; i < heroes.length; i++) {
-            heroes[i].setDamage(heroes[i].getDamage() );
+            if (heroes[i].getDamage() != 0) {
+                heroes[i].setDamage(heroes[i].getDamage() + n);
+            }
         }
         System.out.println("Magic use ability");
     }

@@ -10,16 +10,16 @@ public class RPG_game {
 
     private static int roundNumber;
     public static void startGame(){
-        Boss boss = new Boss(1000, 50,"AKA-Boss");
-        Warrior warrior = new Warrior(290, 10, "Palych");
-        Medic doc = new Medic(250,5,15,"Vrach");
-        Magic magic = new Magic(280,20,"Bakshy");
-        Berserk berserk = new Berserk(260, 10,"Alkash");
-        Medic assistant = new Medic(300, 5, 5,"Medsestra");
-        Golem golem = new Golem (200, 8," Vulkan" );
-        Thor thor = new Thor(250,10, "Molot");
-        Tank tank = new Tank(350, 5,"T40");
-        Witcher witcher = new Witcher(280, 0, "Akmat");
+        Boss boss = new Boss(2000, 100,"Boss");
+        Warrior warrior = new Warrior(290, 10, "Warrior");
+        Medic doc = new Medic(250,0,15,"Doctor");
+        Magic magic = new Magic(280,20,"Magis");
+        Berserk berserk = new Berserk(260, 10,"Berserk");
+        Medic assistant = new Medic(300, 0, 5,"Medic");
+        Golem golem = new Golem (200, 5,"Golem");
+        Thor thor = new Thor(250,10, "Thor");
+        Tank tank = new Tank(350, 5,"Tank");
+        Witcher witcher = new Witcher(280, 0, "Witcher");
         Hero[] heroes = {warrior, doc, magic, berserk, assistant, golem, thor,tank, witcher};
 
 //        showStatistics(boss, heroes);
@@ -41,7 +41,7 @@ public class RPG_game {
             boss.attack(hero);
             for (int i = 0; i < hero.length; i++) {
                 hero[i].getAbility();
-                hero[i].attack(boss);
+                hero[i].attack(boss, hero);
                 hero[i].applySuperAbility(boss, hero);
             }
             boss.getDefence();

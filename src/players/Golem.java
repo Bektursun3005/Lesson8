@@ -7,6 +7,7 @@ public class Golem extends Hero{
 
     @Override
     public void applySuperAbility(Boss boss, Hero[] heroes) {
+        heroes[5].setDamage(5);
         heroes[5].setDamage(heroes[5].getDamage() + (boss.getDamage() / 2));
         System.out.println("Golem use ability");
     }
